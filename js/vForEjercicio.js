@@ -54,6 +54,10 @@ const app = Vue.createApp({
         alert("Complete el formulario");
       } else {
         this.miArreglo.unshift(nuevoProducto);
+        this.nombre=""
+         this.codigo=""
+         this.precio=0
+       this.stock=0
         miArreglo.sort(orden);
       }
     },
