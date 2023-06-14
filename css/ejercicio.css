@@ -1,0 +1,37 @@
+table,th,td{
+    border: 1px solid;
+   
+}
+table{
+    width: 50%;
+    border-collapse: collapse;
+}
+td{
+    text-align: center;
+}
+tr:hover{
+    background-color: aqua;
+}
+th {
+    background-color: #04AA6D;
+    color: white;
+    border: 1px solid black;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .formulario{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    padding: 10px;
+  }
+  input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+  }

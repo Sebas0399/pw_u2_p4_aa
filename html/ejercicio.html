@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercado</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="../css/ejercicio.css" />
+  </head>
+  <body>
+    <header></header>
+    <nav></nav>
+    <section>
+      <div class="container" id="miEjercicio">
+        <h4>Productos Tienda</h4>
+        <div class="formulario">
+          <label for="inventNombre">Nombre</label>
+          <input type="text" v-model="nombre" id="inventNombre" />
+          <label for="inventCodigo">Codigo</label>
+          <input type="text" v-model="codigo" id="inventCodigo" />
+          <label for="inventPrecio">Precio</label>
+          <input type="number" v-model="precio" id="inventPrecio" />
+          <label for="inventStock">Stock</label>
+          <input type="number" v-model="stock" id="inventStock" />
+          <button v-on:click="agregarProducto">Insertar</button>
+        </div>
+
+        <table>
+          <tr>
+            <th v-for="titulo in titulos">{{titulo}}</th>
+          </tr>
+          <tr v-for="invent in miArreglo">
+            <td>{{invent.nombre}}</td>
+            <td>{{invent.codigo}}</td>
+            <td>{{invent.precio}}</td>
+            <td>{{invent.stock}}</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <footer></footer>
+    <script src="../js/vForEjercicio.js"></script>
+  </body>
+</html>
