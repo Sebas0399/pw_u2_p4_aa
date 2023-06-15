@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/calculadora.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <section>
+      <div class="container" id="miCalculadora">
+
+        <div class="calculadora">
+            <input type="number" name="" id="numero" class="entrada" v-model="numero" />
+
+          <button class="one" v-on:click="saveNum(1)">1</button>
+          <button class="two" v-on:click="saveNum(2)">2</button>
+          <button class="three" v-on:click="saveNum(3)">3</button>
+
+          <button class="suma" v-on:click="saveOpt('suma')">+</button>
+          <button class="four" v-on:click="saveNum(4)">4</button>
+          <button class="five" v-on:click="saveNum(5)">5</button>
+          <button class="six" v-on:click="saveNum(6)">6</button>
+          <button class="resta" v-on:click="saveOpt('resta')">-</button>
+          <button class="seven" v-on:click="saveNum(7)">7</button>
+          <button class="eight" v-on:click="saveNum(8)">8</button>
+          <button class="nine" v-on:click="saveNum(9)">9</button>
+          <button class="multiplicacion"v-on:click="saveOpt('multiplicacion')">
+            *
+          </button>
+
+          <button class="cero" v-on:click="saveNum(0)">0</button>
+          <button class="equal" v-on:click="solve">=</button>
+
+          <button class="division" v-on:click="saveOpt('division')">/</button>
+          <label class="resultado" id="resultado">Resultado: {{res}}</label>
+
+        </div>
+      </div>
+    </section>
+    <footer></footer>
+    <script src="../js/calculadora.js"></script>
+
+  </body>
+</html>

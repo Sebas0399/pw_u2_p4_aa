@@ -12,7 +12,7 @@
     <nav></nav>
     <section>
       <div id="miApp2">
-        <h4 >Estudiantes UCE</h4>
+        <h4 v-if="false">Estudiantes UCE</h4>
         <input type="text" v-model="nombre" v-on:keypress.enter="agregarEstudiante2">
         
         <h1>{{nombre}}</h1>
@@ -21,7 +21,9 @@
         <ul>
           <li v-for="({nombre,apellido},index) in miArreglo">
             <span>{{index+1}}--{{nombre}}</span>
-            <blockquote>{{apellido}}</blockquote>
+            <blockquote v-if="apellido!==undefined">Apellido1: {{apellido}}</blockquote>
+            <blockquote v-show="apellido!==undefined">Apellido2: {{apellido}}</blockquote>
+
           </li>
         </ul>
         <!-- <table>
