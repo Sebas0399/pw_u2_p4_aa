@@ -5,39 +5,47 @@ var numero="";
 const app = Vue.createApp({
   data() {
     return {
-        numero,
-      numbers,
-      opcion,
+        
+      numero,
       res,
     };
   },
   methods: {
     saveNum(n){
-        this.numero=this.numero.concat(n)
+      console.log(this.res)
+        this.numero=this.numero+n
+        numbers.push(parseInt(this.numero))
+      
+       
     },
     saveOpt(o){
-        numbers.push(parseInt(this.numero))
+      
+        
         this.numero=""
-        this.opcion=o
+        numero=""
+        opcion=o
     },
     solve(){
-        this.numero=""
-        if(this.opcion=="suma"){
-            this.res=this.sumar(this.numbers[0],this.numbers[1])
+        numero=""
+        if(opcion=="suma"){
+            this.res=this.sumar(numbers[0],numbers[1])
+     
            
         }
-        else if(this.opcion=="multiplicacion"){
-            this.res=this.multiplicar(this.numbers[0],this.numbers[1])
+        else if(opcion=="multiplicacion"){
+          this.res=this.multiplicar(numbers[0],numbers[1])
         }
-        else if(this.opcion=="resta"){
-            this.res=this.restar(this.numbers[0],this.numbers[1])
+        else if(opcion=="resta"){
+          this.res=this.restar(numbers[0],numbers[1])
         }
         else{
-            this.res=this.dividir(this.numbers[0],this.numbers[1])
+          this.res=this.dividir(numbers[0],numbers[1])
 
         }
-        this.numbers=[]
-        this.opcion=""
+        numbers=[]
+        opcion=""
+        this.numero=""
+       
         
        
     },
